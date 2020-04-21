@@ -82,6 +82,11 @@ export class ChatDialogComponent implements OnInit {
         this.suggestions = [];
         let hotelString = speech.split(':');
         this.suggestions = hotelString[1].split(',');
+      } else if (
+        speech.includes('again') ||
+        speech.includes('missed') ||
+        speech.includes('What was')
+      ) {
       } else {
         this.suggestions = [];
       }
